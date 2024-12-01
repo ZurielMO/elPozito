@@ -1,0 +1,80 @@
+/* Estilo para agregar margen superior al header */
+header {
+    margin-top: 20px;
+}
+
+/* Usuario */
+.user-box {
+    display: inline-block;
+    padding: 10px 20px; /* Ajusta el relleno del rectángulo según sea necesario */
+    background-color: #ccc; /* Color de fondo del rectángulo */
+    border-radius: 30px; /* Ajusta este valor según sea necesario para obtener una forma ovalada */
+}
+
+/* Ajustes para el botón */
+.btn-oval {
+    border-radius: 50px; /* Forma ovalada */
+    background-color: #1A237E; /* Color de fondo */
+    color: #ffffff; /* Color del texto */
+    border: 2px solid #1A237E; /* Borde */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de la fuente */
+    cursor: pointer; /* Cursor al pasar */
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s; /* Transición suave */
+}
+
+/* Estilos al pasar el cursor */
+.btn-oval:hover {
+    background-color: #002752; /* Color de fondo más oscuro */
+    border-color: white; /* Color del borde más oscuro */
+}
+
+/* Estilos para los botones */
+.square-button {
+    width: 50%; /* Ajusta el ancho según sea necesario */
+    height: 95%; /* Ajusta la altura según sea necesario */
+    border: none;
+    border-radius: 10px; /* Reducir el radio de borde para hacer los botones más cuadrados */
+    font-size: 20px; /* Ajusta el tamaño de fuente según sea necesario */
+    font-weight: bold;
+    margin: 10px;
+    cursor: pointer;
+    opacity: 0.7; /* Opacidad inicial */
+    transition: opacity 1.0s; /* Transición suave de la opacidad */
+}
+
+/* Estilos para cada botón específico */
+.venta-button {
+    background-color: #FF5733; /* Rojo */
+    color: white;
+}
+
+.productos-button {
+    background-color: #FFA533; /* Naranja */
+    color: white;
+}
+
+.empleados-button {
+    background-color: #33A1FF; /* Azul claro */
+    color: white;
+}
+
+.clientes-button {
+    background-color: #3366FF; /* Azul ligeramente más fuerte */
+    color: white;
+}
+
+/* Al pasar el cursor sobre el botón, la opacidad se establece en 1 */
+.square-button:hover {
+    opacity: 1;
+}
+
+#button-container {
+    margin-top: 90px; /* Ajusta el margen superior según sea necesario */
+    text-align: center; /* Centra los botones horizontalmente */
+}
+
+
+
+
+

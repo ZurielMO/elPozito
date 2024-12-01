@@ -1,0 +1,163 @@
+/* Estilo para agregar margen superior al header */
+header {
+    margin-top: 20px;
+}
+
+/* Estilos para el rectángulo naranja */
+.orange-rectangle {
+    background-color: #F5FAFF;
+    padding: 0px;
+    text-align: center;
+    color: #2D6895;
+    font-weight: bold;
+    width: 70%;
+    text-align: center;
+    height: 20%;
+    position: center;
+    margin-right: 15%;
+    margin-left: 15%;
+}
+
+/* Ajustes para el botón */
+.btn-oval {
+    border-radius: 50px; /* Forma ovalada */
+    background-color: #1A237E; /* Color de fondo */
+    color: #ffffff; /* Color del texto */
+    border: 2px solid #1A237E; /* Borde */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de la fuente */
+    cursor: pointer; /* Cursor al pasar */
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s; /* Transición suave */
+}
+
+/* Estilos al pasar el cursor */
+.btn-oval:hover {
+    background-color: #002752; /* Color de fondo más oscuro */
+    border-color: #002752; /* Color del borde más oscuro */
+}
+
+/* Estilos para el contenido */
+.content {
+    margin-top: 20px; /* Ajusta el valor según sea necesario */
+}
+
+/* Estilos para la barra de búsqueda */
+.search-bar {
+    margin-top: 20px; /* Espacio entre el rectángulo naranja y la barra de búsqueda */
+    display: flex;
+    justify-content: space-between; /* Distribuye los elementos de manera uniforme */
+    align-items: center; /* Alinear verticalmente los elementos */
+    background-color: #f8f8f8; /* Color de fondo */
+    border-radius: 10px; /* Borde redondeado */
+    border: 1px solid #ccc; /* Borde */
+    padding: 5px; /* Espaciado interno ajustado */
+    width: 50%; /* Asegura que ocupe todo el ancho del contenedor */
+    box-sizing: border-box; /* Incluye el borde en el ancho total */
+    margin-left: 25%;
+}
+
+.search-bar input[type="text"] {
+    width: calc(30% - 5px); /* Ancho ajustado */
+    border: none; /* Sin borde */
+    outline: none; /* Sin contorno */
+    padding: 5px; /* Espaciado interno ajustado */
+    font-size: 14px; /* Tamaño de fuente */
+    background-color: #f8f8f8;
+    position: center;
+    text-align: center;
+}
+
+/* Estilos para el contenedor del botón */
+.button-container {
+    display: flex;
+    justify-content: flex-end; /* Alinea el botón a la derecha */
+    margin-top: 20px; /* Margen superior */
+    margin-right: 20px; /* Margen derecho */
+    margin-bottom: 20px; /* Margen inferior */
+    margin-left: 20px; /* Margen izquierdo */
+}
+
+/* Estilos para el botón */
+.button-container button {
+    border-radius: 50px; /* Forma ovalada */
+    border: 1px solid orange; /* Borde naranja */
+    background-color: transparent; /* Fondo transparente para que el color del botón sea visible */
+    color: orange; /* Color del texto naranja */
+    padding: 8px 16px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cursor apuntador */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Transición suave de propiedades */
+}
+
+.button-container button:hover {
+    background-color: orange; /* Cambio de color de fondo al pasar el cursor */
+    color: white; /* Cambio de color del texto al pasar el cursor */
+    border-color: orange; /* Cambio de color del borde al pasar el cursor */
+}
+
+.table-wrapper {
+    max-height: 300px; /* Altura máxima del contenedor */
+    overflow-y: auto; /* Agrega una barra de desplazamiento vertical cuando sea necesario */
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+}
+
+.custom-table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+}
+
+.custom-table th,
+.custom-table td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+    height: 70%;
+    text-align: center;
+}
+
+.custom-table th {
+    background-color: #f2f2f2;
+    color: #333333;
+    text-align: center;
+}
+
+.custom-table tbody tr:nth-child(even) {
+    background-color: white;
+    height: 60%;
+    text-align: center;
+}
+
+.custom-table tbody tr:hover {
+    background-color: #dddddd;
+}
+
+.btn-edit,
+.btn-delete {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+.btn-edit:hover,
+.btn-delete:hover {
+    background-color: #0056b3;
+}
+
+
+.user-box {
+    display: inline-block;
+    padding: 10px 20px; /* Ajusta el relleno del rectángulo según sea necesario */
+    background-color: #ccc; /* Color de fondo del rectángulo */
+    border-radius: 30px; /* Ajusta este valor según sea necesario para obtener una forma ovalada */
+}
+
+.edit-btn:hover, .delete-btn:hover {
+    background-color: #F1F1F1; /* Color azul al pasar el ratón */
+}
+
+

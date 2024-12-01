@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Sistema de punto de venta para la tienda El Pozito, especializada en productos farmacéuticos y de salud.">
+        <meta name="keywords" content="punto de venta, tienda, El Pozito, farmacia, medicamentos, ventas, inventario">
+        <meta name="author" content="Codeagle Software Company">
+
+        <title>Menu Venta</title>
+        <link rel="icon" type="image/x-icon" href="../style/img/logo_elpozito.png">
+
+        <!-- CSS -->
+        <link href="../style/venta.css" rel="stylesheet" type="text/css"/>
+        <!-- Boostrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <!-- Fontawesome -->
+        <link href="style/fontawesome-free-6.4.0-web/css/fontawesome.css" rel="stylesheet" type="text/css"/>
+        <link href="style/fontawesome-free-6.4.0-web/css/brands.css" rel="stylesheet" type="text/css"/>
+        <link href="style/fontawesome-free-6.4.0-web/css/solid.css" rel="stylesheet" type="text/css"/>
+        <link href="style/fontawesome-free-6.4.0-web/css/fontawesome.css" rel="stylesheet" type="text/css"/>
+        <link href="style/fontawesome-free-6.4.0-web/css/solid.css" rel="stylesheet" type="text/css"/>
+        <link href="style/fontawesome-free-6.4.0-web/css/brands.css" rel="stylesheet" type="text/css"/>
+        <link href="style/fontawesome-free-6.4.0-web/css/fontawesome.min.css" rel="stylesheet" type="text/css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+        <!-- Fontawesome -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+        <script src="https://kit.fontawesome.com/de728f247d.js" crossorigin="anonymous"></script>
+        <script src="style/package/dist/sweetalert2.all.min.js" type="text/javascript"></script>
+    </head>
+    <body onload="buscarClienteVenta();">
+        <header class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                    <!-- Contenedor para el nombre de usuario -->
+                    <br>
+                    <div class="user-info">
+                        <div class="user-box">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#565658" d="M399 384.2C376.9 345.8 335.4 320 288 320H224c-47.4 0-88.9 25.8-111 64.2c35.2 39.2 86.2 63.8 143 63.8s107.8-24.7 143-63.8zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm256 16a72 72 0 1 0 0-144 72 72 0 1 0 0 144z"/></svg>
+                            <span class="user-name">Usuario</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <!-- Espacio para la foto -->
+                    <div class="user-photo">
+                        <!-- Aquí puedes poner la foto del usuario si lo deseas -->
+                        <img src="../style/img/logo_elpozito.png" class="img-fluid" alt="logo;" style="width: 30%; height: auto">
+                    </div>
+                </div>
+                <div class="col-md-4 text-end">
+                    <!-- Botón para cerrar sesión con imagen -->
+                    <br>
+                    <a href="menuPrincipal.html">
+                        <button class="btn-oval" style="background-color: #495057; border-color:  #495057">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="32" width="32" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffffff" d="M512 256A256 256 0 1 0 0 256a256 256 0 1 0 512 0zM217.4 376.9L117.5 269.8c-3.5-3.8-5.5-8.7-5.5-13.8s2-10.1 5.5-13.8l99.9-107.1c4.2-4.5 10.1-7.1 16.3-7.1c12.3 0 22.3 10 22.3 22.3l0 57.7 96 0c17.7 0 32 14.3 32 32l0 32c0 17.7-14.3 32-32 32l-96 0 0 57.7c0 12.3-10 22.3-22.3 22.3c-6.2 0-12.1-2.6-16.3-7.1z"/></svg>
+                            Menú Principal
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+
+        <div class="content">
+            <br><br>
+            <h3 class="orange-rectangle">
+                Menú Venta
+            </h3>
+            <br>
+
+            <div>
+
+                <div class="container mt-3">
+                   
+                    <div id="demo" class="div" style="background-color: #f8f8f8; width: 100%">
+                        <div class="row">
+                            <div class="col-6">
+                              <div class="content"  style="background-color: white; margin-bottom: 10%">
+                                    <br>
+                                    <h3 class="orange-rectangle" style="background-color: #F8EAE8; color:#BD3D24;">
+                                        <i class="fa-solid fa-file-invoice-dollar fa-sm" style="color: #BD3D24;"></i>
+                                        Detalle de Venta
+                                    </h3>
+                                    <br>
+                                   
+                                    <br>
+
+
+                                    <div class="row">
+                                        
+                                        <div class="col-sm-10" style="text-align: justify; margin-left: 8%; margin-right: 5%">
+                                            <div class="mb-3" style="margin: 0px; padding: 10px; background-color: whitesmoke; border-radius: 5px;">
+                                                <label for="txtNombreClienteV" class="form-label">Nombre de Cliente:</label>
+                                                <input type="text" class="form-control" id="txtNombreClienteV" name="nombre" readonly>
+                                            </div>
+
+                                            <br>
+
+                                            <div class="mb-3" style="margin: 0px; padding: 0px; background-color: white;">
+                                                <div class="table-wrapper">
+                                                    <table class="custom-table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Código Producto</th>
+                                                                <th>Nombre</th>
+                                                                <th>Unidad de Medida</th>
+                                                                <th>Cantidad</th>
+                                                                <th>Precio Venta</th>
+                                                                <th></th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody id="tbProductosVenta">
+                                                           
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                            <br><br><br>
+
+                                            <div class="mb-3" style="margin-left: 25%; margin-right: 25%; padding: 10px; background-color: #F8EAE8; border-radius: 5px; text-align: center">
+                                                <label for="txtTotal" class="form-label" style="color: #BD3D24; text-align: center"><b>TOTAL:</b></label>
+                                                <input type="number" class="form-control" id="txtTotal" name="nombre" step=".01" readonly>
+                                            </div>
+
+                                            <br><br><br><br>
+
+                                            <div class="mb-3 text-end" style="margin-top: 20px;">
+                                                <button type="button" class="btn btn-success" onclick="generarVenta();">Generar Venta</button>
+                                                <button type="button" class="btn btn-danger" onclick="cancelarVenta();">Cancelar Venta</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <br>
+
+
+
+                                    <div class="col-3"></div>
+                                </div>  
+                            </div>
+
+                            <div class="col-6" >                   
+                                <div class="content" >                                  
+                                    <br><br>
+                                    
+                                    <h3 class="orange-rectangle" style="background-color: #FBF0E6; color:#DB7206;">
+                                        <i class="fa-solid fa-boxes-stacked fa-xs" style="color: #DB7206;"></i>
+                                        Producto
+                                    </h3>
+                                    <br>
+
+                                    <div>
+                                        <div class="search-bar">
+                                            <input type="text" placeholder="Escribe aqui..." id="txtBuscarProductoV">
+                                            <button id="btnBuscarProducto" type="button" class="btn" onclick="buscarProductoV();">
+                                                <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #a5a5a5;"></i>
+                                            </button>
+                                        </div>
+                                        <br><br>
+
+                                    </div>
+                                </div>
+
+
+
+                                <div class="table-wrapper" style="background-color: #f8f8f8">
+                                    <table class="custom-table" style="background-color: #f8f8f8">
+                                        <thead>
+                                            <tr>
+                                                <th>Código Producto</th>
+                                                <th>Nombre</th>
+                                                <th>Categoría </th>
+                                                <th>Precio Venta</th>
+                                                <th>Operación</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="tbBusquedaProductoV">
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="content" >
+                                    <br><br>
+                                    <h3 class="orange-rectangle" style="background-color: #DDEEF4; color:#256F86;">
+                                        <i class="fa-solid fa-user fa-xs" style="color: #256F86;"></i>
+                                        Cliente
+                                    </h3>
+                                    <br>
+
+                                    <div>
+                                        <div class="search-bar">
+                                            <input type="text" placeholder="Escribe aqui..." id="txtBuscarClienteV">
+                                            <button id="btnBuscarCliente" type="button" class="btn" onclick="buscarClienteV();">
+                                                <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #a5a5a5;"></i>
+                                            </button>
+                                        </div>
+                                        <br><br>
+
+                                    </div>
+                                </div>
+
+
+
+                                <div class="table-wrapper" style="background-color: #f8f8f8">
+                                    <table class="custom-table" style="background-color: #f8f8f8">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Nombre</th>
+                                                <th>Telefono</th>
+                                                <th>Operación</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="tbBusquedaClienteV">
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <br><br>
+                        <!--  
+                        <div class="row">
+                            <div class="col-3"></div>
+                            <div class="col-6">
+                                
+                                
+                            </div>
+                        </div>-->
+
+                    </div>
+                </div>
+                <br><br>
+                <!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" style="max-height: 90vh;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Inventario del producto</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="table-wrapper">
+            <table class="custom-table">
+                <thead>
+                    <tr>
+                        <th>Código del Producto</th>                    
+                        <th>Nombre </th>
+                        <th>Presentación</th>
+                        <th>Precio Compra</th>
+                        <th>Existencias</th>
+                    </tr>
+                </thead>
+                <tbody id="tbInventario">
+                   
+                </tbody>
+            </table>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Listo</button>
+      </div>
+    </div>
+  </div>
+</div>
+                </body>
+                <script src="../js/venta.js" type="text/javascript"></script>
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+                </html>
